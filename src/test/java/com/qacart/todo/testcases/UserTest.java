@@ -25,7 +25,7 @@ public class UserTest extends BaseTest {
 */
 
         Assert.assertTrue(
-                new SignupPage(driver)
+                new SignupPage(driver.get())
                     .load()
                     .signup(firstName,lastName,password,email)
                     .isWelcomeDisplayed());

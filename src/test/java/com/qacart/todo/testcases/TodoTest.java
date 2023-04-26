@@ -20,7 +20,7 @@ public class TodoTest extends BaseTest {
         String password = "iLikeTesting";
         String toDo = "Learn Selenium";
         Assert.assertEquals(
-                new SignupPage(driver)
+                new SignupPage(driver.get())
                     .load()
                     .signup(firstName,lastName,password,email)
                     .addNewToDo()
@@ -37,7 +37,7 @@ public class TodoTest extends BaseTest {
         String password = "iLikeTesting";
         String toDo = "Learn Selenium";
         Assert.assertTrue(
-                new SignupPage(driver)
+                new SignupPage(driver.get())
                         .load()
                         .signup(firstName,lastName,password,email)
                         .addNewToDo()
